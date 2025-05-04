@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.food.BackendFoodApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.01 s -- in com.food.BackendFoodApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.028 s -- in com.food.BackendFoodApplicationTests
