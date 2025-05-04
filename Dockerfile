@@ -1,12 +1,11 @@
-# Étape 1 : Build
-FROM maven:3.9.6-eclipse-temurin-21 AS build
+# Étape 1 : Build avec Maven
+FROM maven:3.9.5-eclipse-temurin-17 AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
-
-# Étape 2 : Run
-FROM openjdk:21
+# Étape 2 : Exécution avec JDK
+FROM eclipse-temurin:17
 WORKDIR /app
-COPY --from=build /app/target/*.jar backendFood.jar
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "backendFood.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
